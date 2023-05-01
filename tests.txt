@@ -1,0 +1,41 @@
+minishell$ export aaa=
+minishell$ export aaa=""
+minishell$ export aaa
+minishell$ export aaa
+minishell$ export aaa+=
+minishell$ export aaa+=
+minishell$ export      
+==========================================
+if there are no env show "command not found"
+==========================================
+default PATH="/usr/gnu/bin:/usr/local/bin:/bin:/usr/bin:." if there are no env
+========================================
+minishell$ unset  lkhj kjh jhg jh g jh jhg jh hj
+error : lkhj not identifier
+error : kjh not identifier
+error : jhg not identifier
+error : jh not identifier
+error : g not identifier
+error : jh not identifier
+error : jhg not identifier
+error : jh not identifier
+error : hj not identifier
+========================================
+minishell$ /exam
+should exit with 126 not 127
+and should print "is directory"
+=======================================
+minishell$ <<<<>>.
+parse error
+should exit with 258
+==============================
+export cmd="ls | wc"
+minishell$ $cmd
+Command not found
+=====================
+minishell$ ..
+minishell$ ..
+minishell$ /
+
+should print "is directory"
+=====================
